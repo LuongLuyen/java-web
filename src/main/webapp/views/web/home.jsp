@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>web</title>
+<title>Page Web</title>
 </head>
 <body>
-<h1>web</h1>
+<h1>Đây là : Web</h1>
 
 </body>
 </html>
