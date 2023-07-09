@@ -10,7 +10,7 @@ CREATE TABLE role(
   modifiedby VARCHAR(255) NULL
 );
 
-CREATE TABLE user (
+CREATE TABLE users (
   id bigint NOT NULL PRIMARY KEY auto_increment,
   username VARCHAR(150) NOT NULL,
   password VARCHAR(150) NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE user (
   modifiedby VARCHAR(255) NULL
 );
 
-ALTER TABLE user ADD CONSTRAINT fk_user_role FOREIGN KEY (roleid) REFERENCES role(id);
+ALTER TABLE users ADD CONSTRAINT fk_user_role FOREIGN KEY (roleid) REFERENCES role(id);
 
 CREATE TABLE news (
   id bigint NOT NULL PRIMARY KEY auto_increment,
@@ -61,6 +61,6 @@ CREATE TABLE comment (
   modifiedby VARCHAR(255) NULL
 );
 
-ALTER TABLE comment ADD CONSTRAINT fk_comment_user FOREIGN KEY (user_id) REFERENCES user(id);
+ALTER TABLE comment ADD CONSTRAINT fk_comment_user FOREIGN KEY (user_id) REFERENCES users(id);
 ALTER TABLE comment ADD CONSTRAINT fk_comment_news FOREIGN KEY (new_id) REFERENCES news(id);
 
