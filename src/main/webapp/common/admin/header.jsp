@@ -16,7 +16,7 @@
             <ul class="nav ace-nav">
                 <li class="light-blue dropdown-modal">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                        Xin chào, 
+                        Xin chào,[Tên quản trị] 
                     </a>
                     <li class="light-blue dropdown-modal">
                         <a href='#'>

@@ -1,6 +1,6 @@
 package com.javaweb.model;
 
-public class RoleModel extends AbstractModel {
+public class CategoryModel extends AbstractModel {
 	
 	private String code;
 	private String name;

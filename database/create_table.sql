@@ -64,18 +64,3 @@ CREATE TABLE comment (
 ALTER TABLE comment ADD CONSTRAINT fk_comment_user FOREIGN KEY (user_id) REFERENCES user(id);
 ALTER TABLE comment ADD CONSTRAINT fk_comment_news FOREIGN KEY (new_id) REFERENCES news(id);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
