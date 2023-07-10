@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,6 +35,7 @@ public class AbstractDAO<T> implements GenericDAO<T> {
 		try {
 			connection = getConnection();
 			statement = connection.prepareStatement(sql);
+			setParameter(statement, parameters);
 			resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				results.add(rowMapper.mapRow(resultSet));
@@ -55,6 +57,26 @@ public class AbstractDAO<T> implements GenericDAO<T> {
 			} catch (SQLException e) {
 				return null;
 			}
+		}
+	}
+
+	private void setParameter(PreparedStatement statement, Object... parameters) {
+		try {
+			for (int i = 0; i < parameters.length; i++) {
+				Object parameter = parameters[i];
+				int index = i + 1;
+				if (parameter instanceof Long) {
+					statement.setLong(index, (Long) parameter);
+				} else if (parameter instanceof String) {
+					statement.setString(index, (String) parameter);
+				} else if (parameter instanceof Integer) {
+					statement.setInt(index, (Integer) parameter);
+				} else if (parameter instanceof Timestamp) {
+					statement.setTimestamp(index, (Timestamp) parameter);
+				}
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 	}
 }

@@ -12,9 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(urlPatterns = {"/admin-home"})
 public class HomeController extends HttpServlet {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = -6922552214992789789L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
