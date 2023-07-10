@@ -1,5 +1,5 @@
 package com.javaweb.dao.impl;
 
-public class NewDAO {
-
+public class NewDAO  {
+	
 }
