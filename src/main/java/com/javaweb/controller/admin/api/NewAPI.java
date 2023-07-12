@@ -8,6 +8,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.javaweb.utils.HttpUtil;
+
 @WebServlet(urlPatterns = {"/api-admin-new"})
 public class NewAPI extends HttpServlet {
 
@@ -20,6 +22,9 @@ public class NewAPI extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		request.setCharacterEncoding("UTF-8");
+		response.setContentType("application/json");
+		HttpUtil.of(request.getReader());
 
 	}
 	protected void doPut(HttpServletRequest request, HttpServletResponse response)
