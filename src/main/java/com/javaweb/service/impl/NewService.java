@@ -25,7 +25,11 @@ public class NewService implements INewService {
 
 	@Override
 	public NewModel update(NewModel updateNew) {
-		return null;
+		NewModel oldNew = newDao.findOne(updateNew.getId());
+		updateNew.setCreatedDate(oldNew.getCreatedDate());
+		updateNew.setCreatedBy(oldNew.getCreatedBy());
+		newDao.update(updateNew);
+		return newDao.findOne(updateNew.getId());
 	}
 
 }

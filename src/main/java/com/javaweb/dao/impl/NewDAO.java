@@ -22,7 +22,11 @@ public class NewDAO extends AbstractDAO<NewModel> implements INewDAO {
 
 	@Override
 	public void update(NewModel updateNew) {
-		
+		StringBuilder sql = new StringBuilder("UPDATE news SET title = ?, thumbnail = ?,");
+		sql.append(" shortdescription = ?, content = ?, categoryid = ?");
+		sql.append(" WHERE id = ?");
+		update(sql.toString(), updateNew.getTitle(), updateNew.getThumbnail(), updateNew.getShortDescription(),
+				updateNew.getContent(), updateNew.getCategoryId(), updateNew.getId());
 	}
 
 	@Override

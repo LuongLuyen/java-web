@@ -16,7 +16,7 @@ import com.javaweb.mapper.RowMapper;
 public class AbstractDAO<T> implements GenericDAO<T> {
 	public Connection getConnection() {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 			String url = "jdbc:mysql://localhost:3306/javaweb";
 			String user = "root";
 			String password = "";
@@ -112,9 +112,7 @@ public class AbstractDAO<T> implements GenericDAO<T> {
 				e2.printStackTrace();
 			}
 		}
-		
 	}
-
 	@Override
 	public Long insert(String sql, Object... parameters) {
 		Connection connection = null;
