@@ -31,5 +31,13 @@ public class NewService implements INewService {
 		newDao.update(updateNew);
 		return newDao.findOne(updateNew.getId());
 	}
+	@Override
+	public void delete(long[] ids) {
+		for (long id: ids) {
+			//1.delete comment (khoa ngoai new_id)
+			//2.delete news
+			newDao.delete(id);
+		}
+	}
 
 }

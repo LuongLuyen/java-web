@@ -35,5 +35,10 @@ public class NewDAO extends AbstractDAO<NewModel> implements INewDAO {
 		List<NewModel> news = query(sql, new NewMapper(), id);
 		return news.isEmpty() ? null : news.get(0);
 	}
+	@Override
+	public void delete(long id) {
+		String sql = "DELETE FROM news WHERE id = ?";
+		update(sql, id);
+	}
 	
 }
