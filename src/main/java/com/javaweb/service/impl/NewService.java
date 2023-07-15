@@ -1,6 +1,8 @@
 package com.javaweb.service.impl;
 
+import java.sql.Timestamp;
 import java.util.List;
+
 import javax.inject.Inject;
 
 import com.javaweb.dao.INewDAO;
@@ -19,6 +21,7 @@ public class NewService implements INewService {
 
 	@Override
 	public NewModel save(NewModel newModel) {
+		newModel.setCreatedDate(new Timestamp(System.currentTimeMillis()));
 		Long newId = newDao.save(newModel);
 		return newDao.findOne(newId);
 	}
@@ -28,6 +31,7 @@ public class NewService implements INewService {
 		NewModel oldNew = newDao.findOne(updateNew.getId());
 		updateNew.setCreatedDate(oldNew.getCreatedDate());
 		updateNew.setCreatedBy(oldNew.getCreatedBy());
+		updateNew.setModifiedDate(new Timestamp(System.currentTimeMillis()));
 		newDao.update(updateNew);
 		return newDao.findOne(updateNew.getId());
 	}
