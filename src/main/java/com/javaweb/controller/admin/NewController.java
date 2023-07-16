@@ -2,6 +2,7 @@ package com.javaweb.controller.admin;
 
 import java.io.IOException;
 
+import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -9,13 +10,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = {"/admin-new-list"})
-public class NewController extends HttpServlet {
+import com.javaweb.constant.SystemConstant;
+import com.javaweb.model.NewModel;
+import com.javaweb.service.INewService;
 
+@WebServlet(urlPatterns = {"/admin-new"})
+public class NewController extends HttpServlet {
+	
 	private static final long serialVersionUID = -6922552214992789789L;
+	@Inject
+	private INewService newService;
+
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		NewModel model = new NewModel();
+		model.setListResult(newService.findlAll());
+		request.setAttribute(SystemConstant.MODEL, model);
 		RequestDispatcher rd = request.getRequestDispatcher("/views/admin/new/list.jsp");
 		rd.forward(request, response);
 	}

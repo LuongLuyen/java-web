@@ -20,7 +20,7 @@
                 <a class="nav-link" href='#'>Thoát</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href='#'>Đăng nhập</a>
+                <a class="nav-link" href='<c:url value="/admin-home"/>'>Đăng nhập</a>
               </li>
           </ul>
         </div>

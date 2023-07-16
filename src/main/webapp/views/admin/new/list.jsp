@@ -1,13 +1,13 @@
 <%@include file="/common/taglib.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-	<!DOCTYPE html>
-	<html>
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
 
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Danh sách bài viết</title>
-	</head>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Danh sách bài viết</title>
+</head>
 <body>
 	<div class="main-content">
 		<div class="main-content-inner">
@@ -29,24 +29,20 @@
 										<tr>
 											<th>Tên bài viết</th>
 											<th>Mô tả ngắn</th>
+											<th>Thao tác</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>John</td>
-											<td>Doe</td>
-										</tr>
-										<tr>
-											<td>Mary</td>
-											<td>Moe</td>
-										</tr>
-										<tr>
-											<td>July</td>
-											<td>Dooley</td>
-										</tr>
+										<c:forEach var="item" items="${model.listResult}">
+											<tr>
+												<td>${item.title}</td>
+												<td>${item.shortDescription}</td>
+												<td><input type="checkbox" id="checkbox_${item.id}"
+													value="${item.id}"></td>
+										</c:forEach>
 									</tbody>
 								</table>
-								  <ul class="pagination" id="pagination"></ul>
+								<ul class="pagination" id="pagination"></ul>
 							</div>
 						</div>
 					</div>
@@ -56,19 +52,19 @@
 	</div>
 	<!-- /.main-content -->
 	<script type="text/javascript">
-    $(function () {
-        window.pagObj = $('#pagination').twbsPagination({
-            totalPages: 10,
-            visiblePages: 5,
-			startPage: 2,
-            onPageClick: function (event, page) {
-                console.info(page + ' (from options)');
-            }
-        }).on('page', function (event, page) {
-            console.info(page + ' (from event listening)');
-        });
-    });
-</script>
+		$(function() {
+			window.pagObj = $('#pagination').twbsPagination({
+				totalPages : 10,
+				visiblePages : 5,
+				startPage : 2,
+				onPageClick : function(event, page) {
+					console.info(page + ' (from options)');
+				}
+			}).on('page', function(event, page) {
+				console.info(page + ' (from event listening)');
+			});
+		});
+	</script>
 
 </body>
 </html>

@@ -1,8 +1,10 @@
 package com.javaweb.model;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
-public class AbstractModel {
+public class AbstractModel<T> {
 	
 	private Long id;
 	private Timestamp createdDate;
@@ -10,6 +12,7 @@ public class AbstractModel {
 	private String createdBy;
 	private String modifiedBy;
 	private long[] ids;
+	private List<T> listResult = new ArrayList<>();
 	public Long getId() {
 		return id;
 	}
@@ -45,5 +48,11 @@ public class AbstractModel {
 	}
 	public void setIds(long[] ids) {
 		this.ids = ids;
+	}
+	public List<T> getListResult() {
+		return listResult;
+	}
+	public void setListResult(List<T> listResult) {
+		this.listResult = listResult;
 	}
 }

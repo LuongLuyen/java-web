@@ -44,4 +44,9 @@ public class NewService implements INewService {
 		}
 	}
 
+	@Override
+	public List<NewModel> findlAll() {
+		return newDao.findlAll();
+	}
+
 }
