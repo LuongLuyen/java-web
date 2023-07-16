@@ -1,11 +1,13 @@
+<%@include file="/common/taglib.jsp"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Danh sách bài viết</title>
-</head>
+    pageEncoding="UTF-8"%>
+	<!DOCTYPE html>
+	<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Danh sách bài viết</title>
+	</head>
 <body>
 	<div class="main-content">
 		<div class="main-content-inner">
@@ -21,33 +23,31 @@
 					<div class="col-xs-12"></div>
 					<div class="row">
 						<div class="col-xs-12">
-							<div class="table-responsive"></div>
-							<table class="table table-bordered">
-								<thead>
-									<tr>
-										<th>Firstname</th>
-										<th>Lastname</th>
-										<th>Email</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>John</td>
-										<td>Doe</td>
-										<td>john@example.com</td>
-									</tr>
-									<tr>
-										<td>Mary</td>
-										<td>Moe</td>
-										<td>mary@example.com</td>
-									</tr>
-									<tr>
-										<td>July</td>
-										<td>Dooley</td>
-										<td>july@example.com</td>
-									</tr>
-								</tbody>
-							</table>
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th>Tên bài viết</th>
+											<th>Mô tả ngắn</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>John</td>
+											<td>Doe</td>
+										</tr>
+										<tr>
+											<td>Mary</td>
+											<td>Moe</td>
+										</tr>
+										<tr>
+											<td>July</td>
+											<td>Dooley</td>
+										</tr>
+									</tbody>
+								</table>
+								  <ul class="pagination" id="pagination"></ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -55,6 +55,20 @@
 		</div>
 	</div>
 	<!-- /.main-content -->
+	<script type="text/javascript">
+    $(function () {
+        window.pagObj = $('#pagination').twbsPagination({
+            totalPages: 10,
+            visiblePages: 5,
+			startPage: 2,
+            onPageClick: function (event, page) {
+                console.info(page + ' (from options)');
+            }
+        }).on('page', function (event, page) {
+            console.info(page + ' (from event listening)');
+        });
+    });
+</script>
 
 </body>
 </html>
