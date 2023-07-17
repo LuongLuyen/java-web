@@ -7,6 +7,7 @@ import javax.inject.Inject;
 
 import com.javaweb.dao.INewDAO;
 import com.javaweb.model.NewModel;
+import com.javaweb.paging.Pageble;
 import com.javaweb.service.INewService;
 
 public class NewService implements INewService {
@@ -45,8 +46,8 @@ public class NewService implements INewService {
 	}
 
 	@Override
-	public List<NewModel> findlAll(Integer offset, Integer limit) {
-		return newDao.findlAll(offset,limit);
+	public List<NewModel> findlAll(Pageble pageble){
+		return newDao.findlAll(pageble);
 	}
 
 	@Override

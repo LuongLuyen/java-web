@@ -12,7 +12,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.javaweb.constant.SystemConstant;
 import com.javaweb.model.NewModel;
+import com.javaweb.paging.PageRequest;
+import com.javaweb.paging.Pageble;
 import com.javaweb.service.INewService;
+import com.javaweb.sort.Sorter;
 import com.javaweb.utils.FormUtil;
 
 @WebServlet(urlPatterns = {"/admin-new"})
@@ -27,9 +30,9 @@ public class NewController extends HttpServlet {
 			throws ServletException, IOException {
 		
 		NewModel model = FormUtil.toModel(NewModel.class, request);
-
-		Integer offset = (model.getPage() - 1)* model.getMaxPageItem()
-;		model.setListResult(newService.findlAll(offset, model.getMaxPageItem()));
+		Pageble pageble = new PageRequest(model.getPage(), model.getMaxPageItem(),
+				new Sorter(model.getSortName(), model.getSortBy()));
+		model.setListResult(newService.findlAll(pageble));
 		model.setTotalItem(newService.getTotalItem());
 		model.setTotalPage((int) Math.ceil((double) model.getTotalItem() / model.getMaxPageItem()));
 		request.setAttribute(SystemConstant.MODEL, model);

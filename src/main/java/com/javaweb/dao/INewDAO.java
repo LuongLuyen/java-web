@@ -3,6 +3,7 @@ package com.javaweb.dao;
 import java.util.List;
 
 import com.javaweb.model.NewModel;
+import com.javaweb.paging.Pageble;
 
 public interface INewDAO extends GenericDAO<NewModel> {
 	NewModel findOne(Long id);
@@ -10,6 +11,6 @@ public interface INewDAO extends GenericDAO<NewModel> {
 	Long save(NewModel newModel);
 	void update(NewModel updateNew);
 	void delete(long id);
-	List<NewModel>findlAll(Integer offset, Integer limit);
+	List<NewModel>findlAll(Pageble pageble);
 	int getTotalItem();
 }
