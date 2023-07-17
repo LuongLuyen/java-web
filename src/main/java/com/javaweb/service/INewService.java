@@ -9,5 +9,6 @@ public interface INewService {
 	NewModel save(NewModel newModel);
 	NewModel update(NewModel updateNew);
 	void delete(long[] ids);
-	List<NewModel> findlAll();
+	List<NewModel> findlAll(Integer offset, Integer limit);
+	int getTotalItem();
 }
