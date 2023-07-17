@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@include file="/common/taglib.jsp"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 
 <div id="navbar" class="navbar navbar-default          ace-save-state">
     <div class="navbar-container ace-save-state" id="navbar-container">
@@ -18,7 +18,8 @@
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                         Xin chào,[Tên quản trị] 
                     </a>
-                    <li class="light-blue dropdown-modal">
+ 
+                   <li class="light-blue dropdown-modal">
                         <a href='<c:url value="/trang-chu"/>'>
                             <i class="ace-icon fa fa-power-off"></i>
                             Thoát
