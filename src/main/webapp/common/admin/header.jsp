@@ -16,10 +16,10 @@
             <ul class="nav ace-nav">
                 <li class="light-blue dropdown-modal">
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                        Xin chào,[Tên quản trị] 
+                        Xin chào, ${USERMODEL.userName}
                     </a>
-                   <li class="light-blue dropdown-modal">
-                        <a href='<c:url value="/trang-chu"/>'>
+                    <li class="light-blue dropdown-modal">
+                        <a href='<c:url value="/thoat?action=logout"/>'>
                             <i class="ace-icon fa fa-power-off"></i>
                             Thoát
                         </a>

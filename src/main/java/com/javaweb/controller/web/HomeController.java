@@ -14,6 +14,7 @@ import com.javaweb.model.UserModel;
 import com.javaweb.service.ICategoryService;
 import com.javaweb.service.IUserService;
 import com.javaweb.utils.FormUtil;
+import com.javaweb.utils.SessionUtil;
 
 
 @WebServlet(urlPatterns = {"/trang-chu","/dang-nhap","/thoat"})
@@ -34,7 +35,8 @@ public class HomeController extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/views/login.jsp");
 			rd.forward(request, response);
 		} else if (action != null && action.equals("logout")) {
-
+			SessionUtil.getInstance().removeValue(request, "USERMODEL");
+			response.sendRedirect(request.getContextPath()+"/trang-chu");
 		} else {
 			request.setAttribute("categories", categoryService.findAll());
 			RequestDispatcher rd = request.getRequestDispatcher("/views/web/home.jsp");
@@ -48,6 +50,7 @@ public class HomeController extends HttpServlet {
 		String action = request.getParameter("action");
 		if (action != null && action.equals("login")) {
 			UserModel model = FormUtil.toModel(UserModel.class, request);
+			SessionUtil.getInstance().putValue(request, "USERMODEL", model);
 			model = userService.findByUserNameAndPasswordAndStatus(model.getUserName(), model.getPassword(), 1);
 			if (model != null) {
 				if (model.getRole().getCode().equals("USER")) {
