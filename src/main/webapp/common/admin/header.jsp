@@ -18,7 +18,6 @@
                     <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                         Xin chào,[Tên quản trị] 
                     </a>
- 
                    <li class="light-blue dropdown-modal">
                         <a href='<c:url value="/trang-chu"/>'>
                             <i class="ace-icon fa fa-power-off"></i>

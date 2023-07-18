@@ -9,7 +9,7 @@
 </head>
 <body>
 	<div class="container">
-		<!-- <h1 class="form-heading">login Form</h1> -->
+		<h1 class="form-heading">login Form</h1>
 		<div class="login-form">
 			<div class="main-div">
 				<form action="<c:url value='/dang-nhap'/>" id="formLogin" method="post">
