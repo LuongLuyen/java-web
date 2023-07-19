@@ -1,6 +1,7 @@
 package com.javaweb.controller.web;
 
 import java.io.IOException;
+import java.util.ResourceBundle;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -27,11 +28,18 @@ public class HomeController extends HttpServlet {
 	private IUserService userService;
 
 	private static final long serialVersionUID = -6622126168801261536L;
+	ResourceBundle resourceBundle = ResourceBundle.getBundle("message");
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		String action = request.getParameter("action");
 		if (action != null && action.equals("login")) {
+			String alert = request.getParameter("alert");
+			String message = request.getParameter("message");
+			if (message != null && alert != null) {
+				request.setAttribute("message", resourceBundle.getString(message));
+				request.setAttribute("alert", alert);
+			}
 			RequestDispatcher rd = request.getRequestDispatcher("/views/login.jsp");
 			rd.forward(request, response);
 		} else if (action != null && action.equals("logout")) {
@@ -42,7 +50,6 @@ public class HomeController extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/views/web/home.jsp");
 			rd.forward(request, response);
 		}
-
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -50,8 +57,8 @@ public class HomeController extends HttpServlet {
 		String action = request.getParameter("action");
 		if (action != null && action.equals("login")) {
 			UserModel model = FormUtil.toModel(UserModel.class, request);
-			SessionUtil.getInstance().putValue(request, "USERMODEL", model);
 			model = userService.findByUserNameAndPasswordAndStatus(model.getUserName(), model.getPassword(), 1);
+			SessionUtil.getInstance().putValue(request, "USERMODEL", model);
 			if (model != null) {
 				if (model.getRole().getCode().equals("USER")) {
 					response.sendRedirect(request.getContextPath()+"/trang-chu");
@@ -59,7 +66,7 @@ public class HomeController extends HttpServlet {
 					response.sendRedirect(request.getContextPath()+"/admin-home");
 				}
 			} else {
-				response.sendRedirect(request.getContextPath()+"/dang-nhap?action=login");
+				response.sendRedirect(request.getContextPath()+"/dang-nhap?action=login&message=username_password_invalid&alert=danger");
 			}
 		}
 
