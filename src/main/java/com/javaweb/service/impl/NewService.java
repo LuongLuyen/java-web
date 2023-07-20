@@ -5,7 +5,9 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import com.javaweb.dao.ICategoryDAO;
 import com.javaweb.dao.INewDAO;
+import com.javaweb.model.CategoryModel;
 import com.javaweb.model.NewModel;
 import com.javaweb.paging.Pageble;
 import com.javaweb.service.INewService;
@@ -14,6 +16,9 @@ public class NewService implements INewService {
 	
 	@Inject
 	private INewDAO newDao;
+	
+	@Inject
+	private ICategoryDAO categoryDAO;
 
 	@Override
 	public List<NewModel> findByCategoryId(Long categoryId) {
@@ -23,6 +28,8 @@ public class NewService implements INewService {
 	@Override
 	public NewModel save(NewModel newModel) {
 		newModel.setCreatedDate(new Timestamp(System.currentTimeMillis()));
+		CategoryModel category = categoryDAO.findOneByCode(newModel.getCategoryCode());
+		newModel.setCategoryId(category.getId());
 		Long newId = newDao.save(newModel);
 		return newDao.findOne(newId);
 	}
@@ -33,6 +40,8 @@ public class NewService implements INewService {
 		updateNew.setCreatedDate(oldNew.getCreatedDate());
 		updateNew.setCreatedBy(oldNew.getCreatedBy());
 		updateNew.setModifiedDate(new Timestamp(System.currentTimeMillis()));
+		CategoryModel category = categoryDAO.findOneByCode(updateNew.getCategoryCode());
+		updateNew.setCategoryId(category.getId());
 		newDao.update(updateNew);
 		return newDao.findOne(updateNew.getId());
 	}
@@ -56,6 +65,9 @@ public class NewService implements INewService {
 	}
     @Override
     public NewModel findOne(long id) {
-        return newDao.findOne(id);
+		NewModel newModel = newDao.findOne(id);
+		CategoryModel categoryModel = categoryDAO.findOne(newModel.getCategoryId());
+		newModel.setCategoryCode(categoryModel.getCode());
+        return newModel;
     }
 }

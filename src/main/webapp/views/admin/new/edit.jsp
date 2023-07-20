@@ -35,7 +35,7 @@
                                 <div class="col-sm-9">
                                     <select class="form-control" id="categoryCode" name="categoryCode">
                                         <c:if test="${empty model.categoryCode}">
-                                            <option value="">Chọn loại bài viết</option>
+                                            <option value="">Chọn loại bài viết</option> 
                                             <c:forEach var="item" items="${categories}">
                                                 <option value="${item.code}">${item.name}</option>
                                             </c:forEach>
@@ -103,11 +103,6 @@
     </div>
 </div>
 <script>
-	var editor = '';
-	$(document).ready(function(){
-		editor = CKEDITOR.replace( 'content');
-	});
-	
     $('#btnAddOrUpdateNew').click(function (e) {
         e.preventDefault();
         var data = {};
@@ -115,7 +110,6 @@
         $.each(formData, function (i, v) {
             data[""+v.name+""] = v.value;
         });
-        data["content"] = editor.getData();
         var id = $('#id').val();
         if (id == "") {
             addNew(data);
