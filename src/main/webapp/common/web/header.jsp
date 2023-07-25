@@ -2,7 +2,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="#">Start Bootstrap</a>
+        <a class="navbar-brand" href="#">Java Web</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -15,7 +15,7 @@
             </li>
             <c:if test="${not empty USERMODEL}">
               <li class="nav-item">
-                <a class="nav-link" href='#'>Wellcome, ${USERMODEL.userName}</a>
+                <a class="nav-link" href='<c:url value="/admin-home"/>'>Wellcome, ${USERMODEL.userName}</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href='<c:url value="/thoat?action=logout"/>'>Thoát</a>

@@ -12,11 +12,11 @@
 
 		<div class="col-lg-3">
 
-			<h1 class="my-4">Shop Name</h1>
+			<h1 class="my-4">Danh mục</h1>
 			<div class="list-group">
-				<a href="#" class="list-group-item">Category 1</a> <a href="#"
-					class="list-group-item">Category 2</a> <a href="#"
-					class="list-group-item">Category 3</a>
+				<a href="#" class="list-group-item">Sản phẩm </a> <a href="#"
+					class="list-group-item">Sản phẩm</a> <a href="#"
+					class="list-group-item">Sản phẩm</a>
 			</div>
 
 		</div>
@@ -34,11 +34,11 @@
 				</ol>
 				<div class="carousel-inner" role="listbox">
 					<div class="carousel-item active">
-						<img class="d-block img-fluid" src="http://placehold.it/900x350"
+						<img class="d-block img-fluid" src="https://www.didongmoi.com.vn/upload/images/post/chuyen-muc-thang-7.png"
 							alt="First slide">
 					</div>
 					<div class="carousel-item">
-						<img class="d-block img-fluid" src="http://placehold.it/900x350"
+						<img class="d-block img-fluid" src="https://mobigo.vn/upload/tin-tuc/Mobigo-BlackBerry-10-3-3-1.jpg"
 							alt="Second slide">
 					</div>
 					<div class="carousel-item">
@@ -62,14 +62,67 @@
 				<div class="col-lg-4 col-md-6 mb-4">
 					<div class="card h-100">
 						<a href="#"><img class="card-img-top"
-							src="http://placehold.it/700x400" alt=""></a>
+							src="https://lh6.googleusercontent.com/vQ1O6LqT-bwaC4RYa37vKKSL31YfGa_tRxsLFCwZL_0ia_y47laFqe_F9xAXSxQok0FcDkBwIkxfVvrgSnSEv1IN7yc3zOcETZFPloQhpCHPH3oDFhUvpJWvoZvn4xkvjl4rY81M" alt=""></a>
 						<div class="card-body">
 							<h4 class="card-title">
-								<a href="#">Item One</a>
+								<a href="#">Sản phẩm 1</a>
 							</h4>
-							<h5>$24.99</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur
-								adipisicing elit. Amet numquam aspernatur!</p>
+							<h5>4.990.000đ</h5>
+							<p class="card-text">HOÀN TIỀN 7 NGÀY MIỄN PHÍ VỚI BẤT KỲ LÝ DO GÌ (điện thoại cũ). 1 đổi 1 trong 30 ngày đầu cho tất cả lỗi do máy phát sinh.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">&#9733; &#9733; &#9733; &#9733;
+								&#9734;</small>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="card h-100">
+						<a href="#"><img class="card-img-top"
+							src="https://lh6.googleusercontent.com/vQ1O6LqT-bwaC4RYa37vKKSL31YfGa_tRxsLFCwZL_0ia_y47laFqe_F9xAXSxQok0FcDkBwIkxfVvrgSnSEv1IN7yc3zOcETZFPloQhpCHPH3oDFhUvpJWvoZvn4xkvjl4rY81M" alt=""></a>
+						<div class="card-body">
+							<h4 class="card-title">
+								<a href="#">Sản phẩm 2</a>
+							</h4>
+							<h5>4.990.000đ</h5>
+							<p class="card-text">HOÀN TIỀN 7 NGÀY MIỄN PHÍ VỚI BẤT KỲ LÝ DO GÌ (điện thoại cũ). 1 đổi 1 trong 30 ngày đầu cho tất cả lỗi do máy phát sinh.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">&#9733; &#9733; &#9733; &#9733;
+								&#9734;</small>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="card h-100">
+						<a href="#"><img class="card-img-top"
+							src="https://lh6.googleusercontent.com/vQ1O6LqT-bwaC4RYa37vKKSL31YfGa_tRxsLFCwZL_0ia_y47laFqe_F9xAXSxQok0FcDkBwIkxfVvrgSnSEv1IN7yc3zOcETZFPloQhpCHPH3oDFhUvpJWvoZvn4xkvjl4rY81M" alt=""></a>
+						<div class="card-body">
+							<h4 class="card-title">
+								<a href="#">Sản phẩm 3</a>
+							</h4>
+							<h5>4.990.000đ</h5>
+							<p class="card-text">HOÀN TIỀN 7 NGÀY MIỄN PHÍ VỚI BẤT KỲ LÝ DO GÌ (điện thoại cũ). 1 đổi 1 trong 30 ngày đầu cho tất cả lỗi do máy phát sinh.</p>
+						</div>
+						<div class="card-footer">
+							<small class="text-muted">&#9733; &#9733; &#9733; &#9733;
+								&#9734;</small>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4">
+					<div class="card h-100">
+						<a href="#"><img class="card-img-top"
+							src="https://lh6.googleusercontent.com/vQ1O6LqT-bwaC4RYa37vKKSL31YfGa_tRxsLFCwZL_0ia_y47laFqe_F9xAXSxQok0FcDkBwIkxfVvrgSnSEv1IN7yc3zOcETZFPloQhpCHPH3oDFhUvpJWvoZvn4xkvjl4rY81M" alt=""></a>
+						<div class="card-body">
+							<h4 class="card-title">
+								<a href="#">Sản phẩm 4</a>
+							</h4>
+							<h5>4.990.000đ</h5>
+							<p class="card-text">HOÀN TIỀN 7 NGÀY MIỄN PHÍ VỚI BẤT KỲ LÝ DO GÌ (điện thoại cũ). 1 đổi 1 trong 30 ngày đầu cho tất cả lỗi do máy phát sinh.</p>
 						</div>
 						<div class="card-footer">
 							<small class="text-muted">&#9733; &#9733; &#9733; &#9733;
@@ -84,12 +137,10 @@
 							src="http://placehold.it/700x400" alt=""></a>
 						<div class="card-body">
 							<h4 class="card-title">
-								<a href="#">Item Two</a>
+								<a href="#">Sản phẩm 5</a>
 							</h4>
-							<h5>$24.99</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur
-								adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit
-								amet.</p>
+							<h5>4.990.000đ</h5>
+							<p class="card-text">HOÀN TIỀN 7 NGÀY MIỄN PHÍ VỚI BẤT KỲ LÝ DO GÌ (điện thoại cũ). 1 đổi 1 trong 30 ngày đầu cho tất cả lỗi do máy phát sinh.</p>
 						</div>
 						<div class="card-footer">
 							<small class="text-muted">&#9733; &#9733; &#9733; &#9733;
@@ -104,69 +155,10 @@
 							src="http://placehold.it/700x400" alt=""></a>
 						<div class="card-body">
 							<h4 class="card-title">
-								<a href="#">Item Three</a>
+								<a href="#">Sản phẩm 6</a>
 							</h4>
-							<h5>$24.99</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur
-								adipisicing elit. Amet numquam aspernatur!</p>
-						</div>
-						<div class="card-footer">
-							<small class="text-muted">&#9733; &#9733; &#9733; &#9733;
-								&#9734;</small>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 mb-4">
-					<div class="card h-100">
-						<a href="#"><img class="card-img-top"
-							src="http://placehold.it/700x400" alt=""></a>
-						<div class="card-body">
-							<h4 class="card-title">
-								<a href="#">Item Four</a>
-							</h4>
-							<h5>$24.99</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur
-								adipisicing elit. Amet numquam aspernatur!</p>
-						</div>
-						<div class="card-footer">
-							<small class="text-muted">&#9733; &#9733; &#9733; &#9733;
-								&#9734;</small>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 mb-4">
-					<div class="card h-100">
-						<a href="#"><img class="card-img-top"
-							src="http://placehold.it/700x400" alt=""></a>
-						<div class="card-body">
-							<h4 class="card-title">
-								<a href="#">Item Five</a>
-							</h4>
-							<h5>$24.99</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur
-								adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit
-								amet.</p>
-						</div>
-						<div class="card-footer">
-							<small class="text-muted">&#9733; &#9733; &#9733; &#9733;
-								&#9734;</small>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-lg-4 col-md-6 mb-4">
-					<div class="card h-100">
-						<a href="#"><img class="card-img-top"
-							src="http://placehold.it/700x400" alt=""></a>
-						<div class="card-body">
-							<h4 class="card-title">
-								<a href="#">Item Six</a>
-							</h4>
-							<h5>$24.99</h5>
-							<p class="card-text">Lorem ipsum dolor sit amet, consectetur
-								adipisicing elit. Amet numquam aspernatur!</p>
+							<h5>4.990.000đ</h5>
+							<p class="card-text">HOÀN TIỀN 7 NGÀY MIỄN PHÍ VỚI BẤT KỲ LÝ DO GÌ (điện thoại cũ). 1 đổi 1 trong 30 ngày đầu cho tất cả lỗi do máy phát sinh.</p>
 						</div>
 						<div class="card-footer">
 							<small class="text-muted">&#9733; &#9733; &#9733; &#9733;
